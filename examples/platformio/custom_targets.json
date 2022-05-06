@@ -1,0 +1,32 @@
+{
+    "BLACKPILL_V3_1_F411CE": {
+        "inherits": [
+            "MCU_STM32F4"
+        ],
+        "core": "Cortex-M4",
+        "macros_add": [
+            "STM32F411xE",
+            "HSE_VALUE=25000000U"
+        ],
+        "extra_labels_add": [
+            "STM32F4"
+        ],
+        "components_add": [
+            "FLASHIAP"
+        ],
+        "overrides": {
+            "clock_source": "USE_PLL_HSE_XTAL|USE_PLL_HSI",
+            "lse_available": 1,
+            "default-adc-vref": "3.3f"
+        },
+        "device_has_add": [
+            "USBDEVICE"
+        ],
+        "default_toolchain": "GCC_ARM",
+        "bootloader_supported": true,
+        "detect_code": [
+            "0740"
+        ],
+        "device_name": "MCU_STM32F411CE"
+    }
+}
